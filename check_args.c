@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 11:31:54 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/07 15:51:37 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/07 16:04:43 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	checking(char **dst)
 	while (dst[j])
 	{
 		i = 0;
-		if (strlen_single(dst[j]) > 10
+		if (strlen_single(dst[j]) > 11
 			&& (dst[j][0] != '-' || dst[j][0] != '+'))
 			return (1);
 		if (dst[j][i] == '-' || dst[j][i] == '+')
