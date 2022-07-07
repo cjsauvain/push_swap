@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:27:42 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/06/11 17:23:47 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:29:22 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_init(int argc, char **argv, t_stack *lst1, t_stack *lst2)
 	char	**dst;
 	int		i;
 
-	if (argc == 2 && check_space(argv[1]) == 1)
+	if (argc == 2 && check_space(argv[1]))
 	{
 		dst = ft_split(argv[1], ' ');
 		i = strlen_double(dst);

@@ -6,7 +6,7 @@
 #    By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/11 14:33:12 by jsauvain          #+#    #+#              #
-#    Updated: 2022/06/11 14:33:14 by jsauvain         ###   ########.fr        #
+#    Updated: 2022/07/07 14:22:51 by jsauvain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,11 @@ CLR = clear
 all: $(NAME)
 
 clean:
-		make clean -C libft
+		make clean -sC libft
 		$(RM) $(OBJS) $(CLR)
 
 fclean: clean
-		make fclean -C libft
+		make fclean -sC libft
 		$(RM) $(NAME)
 
 .c.o:
@@ -39,7 +39,7 @@ fclean: clean
 
 $(NAME): $(OBJS)
 		$(CLR)
-		make -C libft
+		make -sC libft
 		$(GCC) $(CFLAGS) -o $(NAME) -L. $(SRCS) -L./libft -lft
 
 re: fclean all

@@ -1,5 +1,0 @@
-#!/bin/bash
-for ((i=0;i<$1;i++))
-do
-	bash tester.sh .. $i 10
-done

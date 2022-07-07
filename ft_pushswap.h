@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 12:11:19 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/06/11 18:26:24 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:17:00 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ void	sort_three_digits(t_stack *lst1, t_op *lst_op);
 void	sort_small_digits(t_stack *lst1, t_stack *lst2, t_op *lst_op);
 
 //check_args.c
-int		one_argument(char **dst);
-int		many_arguments(char **argv);
-int		check_args(char **argv);
+int		checking(char **dst);
 int		check_duplicate(char **src);
+int		check_args_format(char **argv);
+int		check_args(char **argv);
 
 //print_operations.c
 void	get_operations(t_op *lst_op, char *src);
