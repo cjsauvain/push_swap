@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 11:31:54 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/07 16:04:43 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/08 09:48:34 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	check_duplicate(char **src)
 int	check_args_format(char **argv)
 {
 	int	i;
-	
+
 	if (strlen_double(argv) == 2)
 	{
 		i = 0;
