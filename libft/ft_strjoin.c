@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:33:20 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/06/09 17:20:44 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:47:41 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	dst = malloc((strlen_single(s1) + strlen_single(s2) + 1) * sizeof(char));
+	dst = malloc((strlen_s(s1) + strlen_s(s2) + 1) * sizeof(char));
 	if (dst == NULL)
 		return (dst);
 	while (s1[i])

@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 12:11:19 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/07 15:17:00 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 09:39:12 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	sort_small_digits(t_stack *lst1, t_stack *lst2, t_op *lst_op);
 
 //check_args.c
 int		checking(char **dst);
-int		check_duplicate(char **src);
+int		check_duplicates(char **src);
 int		check_args_format(char **argv);
 int		check_args(char **argv);
 

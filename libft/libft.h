@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:06:57 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/06/10 18:06:09 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:28:39 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,20 @@ typedef struct s_op
 }	t_op;
 
 //libft
-int			strlen_single(char *s);
-int			strlen_double(char **s);
+int			ft_strncmp(char *s1, char *s2, size_t n);
+char		*ft_malloc(int n);
+char		*ft_reverse(char *src);
+char		*n_value(int n, char *src);
+char		*ft_itoa(int n);
+int			strlen_s(char *s);
+int			strlen_d(char **s);
 long int	ft_atol(const char *nptr);
 char		*ft_strdup(char *s);
 char		*ft_strjoin(char *s1, char *s2);
 char		**ft_split(char const *s, char c);
 t_stack		*ft_lstnew(int element, int i);
 t_op		*ft_lstnew_string(char *src);
+
 //ft_printf
 int			ft_printf(const char *format, ...);
 int			ft_formatting(const char *str, va_list arg);

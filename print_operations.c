@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 11:46:02 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/06/11 14:32:45 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:30:32 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	get_operations(t_op *lst_op, char *src)
 
 int	ft_cmp(char *src, char *str)
 {
-	if (strlen_single(src) == 2 && strlen_single(str) == 2)
+	if (strlen_s(src) == 2 && strlen_s(str) == 2)
 	{
 		if (src[0] == str[0] && src[1] != str[1] && src[0] == 'p')
 			return (1);

@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 11:31:54 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/11 16:33:28 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:53:35 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,29 @@
 
 int	checking(char **dst)
 {
-	int		i;
-	int		j;
+	int	i;
+	int	j;
+	int	nb;
 
 	j = 0;
 	while (dst[j])
 	{
 		i = 0;
-		if (ft_atol(dst[j]) > 2147483647 || ft_atol(dst[j]) < -2147483648)
-			return (1);
+		nb = 0;
 		if (dst[j][i] == '-' || dst[j][i] == '+')
-			i++;
-		while (dst[j][i])
 		{
-			if (dst[j][i] < '0' || dst[j][i] > '9')
-				return (1);
+			if (dst[j][i] == '+')
+				nb = 1;
 			i++;
 		}
-		if (i == 1 && (dst[j][0] == '-' || dst[j][0] == '+'))
+		if (ft_strncmp(ft_itoa(ft_atol(dst[j])), dst[j] + nb, strlen_s(dst[j])))
 			return (1);
 		j++;
 	}
 	return (0);
 }
 
-int	check_duplicate(char **src)
+int	check_duplicates(char **src)
 {
 	int	i;
 	int	j;
@@ -62,19 +60,9 @@ int	check_args_format(char **argv)
 {
 	int	i;
 
-	if (strlen_double(argv) == 2)
+	i = 1;
+	if (strlen_d(argv) > 2)
 	{
-		i = 0;
-		while (argv[1][i])
-		{
-			if (argv[1][i] == '"')
-				return (1);
-			i++;
-		}
-	}
-	else if (strlen_double(argv) > 2)
-	{
-		i = 1;
 		while (argv[i])
 		{
 			if (check_space(argv[i]) == 1)
@@ -90,15 +78,15 @@ int	check_args(char **argv)
 	int		n;
 	char	**dst;
 
-	if ((strlen_double(argv)) == 1 || check_args_format(argv))
+	if (check_args_format(argv))
 		return (1);
-	else if (strlen_double(argv) == 2)
+	else if (strlen_d(argv) == 2)
 	{
 		dst = ft_split(argv[1], ' ');
-		n = checking(dst) + check_duplicate(dst);
+		n = checking(dst) + check_duplicates(dst);
 		free_double(dst);
 		return (n);
 	}
 	dst = argv + 1;
-	return (checking(dst) + check_duplicate(dst));
+	return (checking(dst) + check_duplicates(dst));
 }

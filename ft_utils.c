@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:27:42 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/07 15:29:22 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:30:11 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_stack	*initialization(char **argv, t_stack *lst1)
 	tmp = lst1;
 	lst1->next = ft_lstnew(ft_atol(argv[i]), 0);
 	i++;
-	while (i < strlen_double(argv))
+	while (i < strlen_d(argv))
 	{
 		lst1 = lst1->next;
 		lst1->next = ft_lstnew(ft_atol(argv[i]), 0);
@@ -55,7 +55,7 @@ int	ft_init(int argc, char **argv, t_stack *lst1, t_stack *lst2)
 	if (argc == 2 && check_space(argv[1]))
 	{
 		dst = ft_split(argv[1], ' ');
-		i = strlen_double(dst);
+		i = strlen_d(dst);
 		lst1 = initialization(dst, lst1);
 		lst2->next = ft_lstnew(0, 0);
 		lst2->indice = 0;

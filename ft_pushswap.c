@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 10:59:07 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/06/11 18:13:59 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:29:52 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int	check(char **argv, t_stack *lst1, t_stack *lst2, t_op *lst_op)
 {
-	if (check_args(argv) != 0)
+	if (strlen_d(argv) == 1)
+		return (1);
+	else if (check_args(argv) != 0)
 	{
 		ft_printf("Error\n");
 		ft_free(lst1, lst2, lst_op);
 		return (1);
 	}
-	if (check_order(lst1) == 0)
+	else if (check_order(lst1) == 0)
 	{
 		ft_free(lst1, lst2, lst_op);
 		return (1);

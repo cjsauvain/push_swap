@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 10:36:12 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/06/09 17:22:52 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:35:37 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ char	**ft_split(char const *s, char c)
 			if (dst[j] == NULL || dst[0] == 0)
 				return (dst);
 			j++;
-			i += strlen_single(dst[j - 1]);
+			i += strlen_s(dst[j - 1]);
 		}
 	}
 	dst = assign_dst(dst, s, c);

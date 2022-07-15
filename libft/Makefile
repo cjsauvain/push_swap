@@ -6,11 +6,11 @@
 #    By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 15:21:43 by jsauvain          #+#    #+#              #
-#    Updated: 2022/06/10 18:07:14 by jsauvain         ###   ########.fr        #
+#    Updated: 2022/07/15 10:31:02 by jsauvain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_strlen.c ft_atol.c ft_strdup.c ft_strjoin.c ft_split.c ft_format.c \
+SRCS = ft_strlen.c ft_strncmp.c ft_atol.c ft_itoa.c ft_strdup.c ft_strjoin.c ft_split.c ft_format.c \
 		ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_unsigned_putnbr.c \
 		low_hexa.c put_hexa_ptr.c to_find.c up_hexa.c
 
