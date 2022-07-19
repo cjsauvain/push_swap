@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 12:11:19 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/15 09:39:12 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/18 09:32:30 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 # include "libft/libft.h"
 
 //ft_pushswap.c
-int		check(char **argv, t_stack *lst1, t_stack *lst2, t_op *lst_op);
+int		first_check(char **argv, t_stack *lst1, t_stack *lst2, t_op *lst);
+int		second_check(char **argv, t_stack *lst1, t_stack *lst2, t_op *lst_op);
 int		check_order(t_stack *lst1);
 
 //ft_utils.c
@@ -55,6 +56,7 @@ int		ft_cmp(char *src, char *str);
 void	print_operations(t_stack *lst1, t_stack *lst2, t_op *lst_op);
 
 //ft_free.c
+void	free_error(t_stack *lst1, t_stack *lst2, t_op *lst_op);
 void	free_double(char **src);
 void	ft_free(t_stack *lst1, t_stack *lst2, t_op *lst_op);
 

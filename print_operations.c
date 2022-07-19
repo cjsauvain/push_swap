@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 11:46:02 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/15 10:30:32 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/18 08:33:08 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,17 @@ int	ft_cmp(char *src, char *str)
 void	print_operations(t_stack *lst1, t_stack *lst2, t_op *lst_op)
 {
 	t_op	*tmp;
+	t_op	*to_delete;
 
 	tmp = lst_op;
 	while (tmp->next->next != 0)
 	{
 		if (ft_cmp(tmp->next->src, tmp->next->next->src) == 1)
 		{
+			to_delete = tmp->next;
 			tmp->next = tmp->next->next->next;
 			tmp = lst_op;
+			ft_lstclear(to_delete);
 		}
 		else
 			tmp = tmp->next;

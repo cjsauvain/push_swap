@@ -6,11 +6,19 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:31:28 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/15 10:30:46 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/18 09:24:34 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_pushswap.h"
+
+void	free_error(t_stack *lst1, t_stack *lst2, t_op *lst_op)
+{
+	free(lst1);
+	free(lst2);
+	free(lst_op->src);
+	free(lst_op);
+}
 
 void	free_double(char **src)
 {

@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:06:57 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/15 10:28:39 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/18 08:30:43 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 typedef struct s_stack
 {
@@ -49,6 +43,7 @@ long int	ft_atol(const char *nptr);
 char		*ft_strdup(char *s);
 char		*ft_strjoin(char *s1, char *s2);
 char		**ft_split(char const *s, char c);
+void		ft_lstclear(t_op *lst);
 t_stack		*ft_lstnew(int element, int i);
 t_op		*ft_lstnew_string(char *src);
 

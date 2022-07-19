@@ -6,11 +6,12 @@
 #    By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/11 14:33:12 by jsauvain          #+#    #+#              #
-#    Updated: 2022/07/07 14:22:51 by jsauvain         ###   ########.fr        #
+#    Updated: 2022/07/18 14:38:25 by jsauvain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_pushswap.c swap_functions.c ft_utils.c ft_sort.c check_args.c print_operations.c ft_free.c small_digits.c
+SRCS = ft_pushswap.c swap_functions.c ft_utils.c ft_sort.c check_args.c print_operations.c \
+		ft_free.c small_digits.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -35,12 +36,12 @@ fclean: clean
 		$(RM) $(NAME)
 
 .c.o:
-	${GCC} ${FLAGS} -c $< -o ${<:.c=.o}
+	$(GCC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJS)
 		$(CLR)
 		make -sC libft
-		$(GCC) $(CFLAGS) -o $(NAME) -L. $(SRCS) -L./libft -lft
+		$(GCC) $(CFLAGS) -o $(NAME) -L. $(OBJS) -L./libft -lft
 
 re: fclean all
 

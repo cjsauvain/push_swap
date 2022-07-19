@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 11:31:54 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/07/15 10:53:35 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/18 09:06:14 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,27 @@
 
 int	checking(char **dst)
 {
-	int	i;
-	int	j;
-	int	nb;
+	int		j;
+	int		nb;
+	char	*str;
 
 	j = 0;
 	while (dst[j])
 	{
-		i = 0;
 		nb = 0;
-		if (dst[j][i] == '-' || dst[j][i] == '+')
+		str = ft_itoa(ft_atol(dst[j]));
+		if (dst[j][0] == '-' || dst[j][0] == '+')
 		{
-			if (dst[j][i] == '+')
+			if (dst[j][0] == '+')
 				nb = 1;
-			i++;
 		}
-		if (ft_strncmp(ft_itoa(ft_atol(dst[j])), dst[j] + nb, strlen_s(dst[j])))
+		if (ft_strncmp(str, dst[j] + nb, strlen_s(dst[j])))
+		{
+			free(str);
 			return (1);
+		}
 		j++;
+		free(str);
 	}
 	return (0);
 }
