@@ -6,7 +6,7 @@
 #    By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/11 14:33:12 by jsauvain          #+#    #+#              #
-#    Updated: 2022/07/18 14:38:25 by jsauvain         ###   ########.fr        #
+#    Updated: 2022/09/07 10:53:44 by jsauvain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ NAME = push_swap
 
 RM = rm -f
 
-GCC = gcc
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -g3
 
@@ -36,12 +36,12 @@ fclean: clean
 		$(RM) $(NAME)
 
 .c.o:
-	$(GCC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJS)
 		$(CLR)
 		make -sC libft
-		$(GCC) $(CFLAGS) -o $(NAME) -L. $(OBJS) -L./libft -lft
+		$(CC) $(CFLAGS) -o $(NAME) -L. $(OBJS) -L./libft -lft
 
 re: fclean all
 

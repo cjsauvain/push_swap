@@ -6,7 +6,7 @@
 #    By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 15:21:43 by jsauvain          #+#    #+#              #
-#    Updated: 2022/07/18 08:38:51 by jsauvain         ###   ########.fr        #
+#    Updated: 2022/09/07 10:53:11 by jsauvain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ SRCS = ft_strlen.c ft_strncmp.c ft_atol.c ft_itoa.c ft_strdup.c ft_strjoin.c ft_
 		ft_format.c ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_unsigned_putnbr.c \
 		low_hexa.c put_hexa_ptr.c to_find.c up_hexa.c ft_lstnew.c ft_lstclear.c
 
-GCC = gcc
+CC = gcc
 
-FLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror -g3
 
 OBJS = $(SRCS:.c=.o)
 
@@ -32,7 +32,7 @@ clean:
 		$(RM) $(OBJS)
 
 .c.o:
-	$(GCC) $(FLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 fclean: clean
 		$(RM) $(NAME)
