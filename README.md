@@ -9,12 +9,13 @@
 
 ## ✅ Prérequis
 
-- Compilateur C
+- gcc
 
 ## 🚀 Compilation && Execution
 
 ```bash
 make
+
 ./push_swap <liste d'entiers>
 ```
 
