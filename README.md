@@ -32,10 +32,3 @@ make
 ## 🧠 Concepts abordés
 
 - Algorithme de tri Radix adapté aux contraintes du projet
-    
-## 📂 Structure du projet
-
-- `*.c` → Fichiers sources
-- `libft/` → Librairie personnelle autorisée
-- `push_swap` → Binaire final généré
-- `Makefile` → Automatisation de la compilation
