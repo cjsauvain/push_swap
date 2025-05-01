@@ -11,7 +11,7 @@
 
 - gcc
 
-## 🚀 Compilation && Execution
+## 📦 Compilation & 🚀 Exécution
 
 ```bash
 make
