@@ -11,14 +11,14 @@
 
 - Compilateur C
 
-## 🧪 Compilation
+## 🚀 Compilation && Execution
 
 ```bash
 make
 ./push_swap <liste d'entiers>
 ```
 
-## ⚙️ Fonctionnalités prises en charge
+## 🧠 Concepts abordés
 
 - Tri de listes d'entiers en utilisant uniquement :
   - `sa`, `sb`, `ss` : swap
@@ -28,7 +28,3 @@ make
 - Algorithmes adaptés à la taille des listes :
   - tri simple pour 2 à 5 éléments
   - tri radix ou optimisé pour listes plus longues
-    
-## 🧠 Concepts abordés
-
-- Algorithme de tri Radix adapté aux contraintes du projet
